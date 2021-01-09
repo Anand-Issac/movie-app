@@ -29,6 +29,13 @@ function MovieResults(props) {
         return false;
     }
 
+    const maxNominationsReached = () => {
+        if (props.nominatedMovies.length >= 5){
+            return true;
+        }
+        return false;
+    }
+
     return (
         <div className="container-class">
             <p>Results for {props.movieSearchTitle}</p>
@@ -40,7 +47,7 @@ function MovieResults(props) {
                                 <li>{movie.Title} ({movie.Year})</li>
                             </div>
                             <div className="nominate-button-container">
-                                <button disabled={isMovieAlreadyNominated(movie)} onClick={() => {nominateMovie(movie)}} className="nominate-button">Nominate</button>
+                                <button disabled={isMovieAlreadyNominated(movie) || maxNominationsReached()} onClick={() => {nominateMovie(movie)}} className="nominate-button">Nominate</button>
                             </div>  
                             <div className="clearfix"></div>
                         </div>

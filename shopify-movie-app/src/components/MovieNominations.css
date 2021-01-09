@@ -27,3 +27,8 @@
 .clearfix{
     clear: both;
 }
+
+.max-nom-warning {
+    color: #8b0000 ;
+    font-size:15px;
+}

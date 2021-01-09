@@ -2,16 +2,10 @@ import React, { useState } from 'react';
 import './MovieNominations.css';
 function MovieNominations(props) {
     const [movie, setMovie] = useState("");
-
-    const handleClick = async (e) => {
-      e.preventDefault();
-      //dispatch(login(email,password, client));
-    };
-
-    const onChangeMovie = (e) => {
-        setMovie(e.target.value);
-    };
-
+    //callback to remove movie from nomination movie list
+    const removeNominationMovie = (movie) => {
+      props.removeNomination(movie);
+  }
     return (
         <div className='container-class'>
             <p>Nominations</p>
@@ -22,7 +16,7 @@ function MovieNominations(props) {
                           <li>{movie.Title} ({movie.Year})</li>
                       </div>
                       <div className="nominate-button-container">
-                          <button onClick={() => {}} className="nominate-button">Remove</button>
+                          <button onClick={() => {removeNominationMovie(movie)}} className="nominate-button">Remove</button>
                       </div>  
                       <div className="clearfix"></div>
                   </div>
@@ -30,6 +24,10 @@ function MovieNominations(props) {
               
               ))}
             </ul>
+            {
+              props.nominatedMovies.length > 4 && 
+              <p className="max-nom-warning">Maximum 5 nominations per user</p>
+            }
         
         </div> 
 

@@ -69,8 +69,26 @@ small {
   text-align: center;
 }
 
-.movie-container {
+.movie-container-1 {
   width: 50%;
   height: 50%;
   background-color: white;
+}
+
+.movie-container-2 {
+  width: 50%;
+  height: 50%;
+  background-color: white;
+  float:left;
+}
+
+.movie-container-3 {
+  width: 50%;
+  height: 50%;
+  background-color: white;
+  float: left;
+}
+
+.clear{
+  clear: both;
 }
