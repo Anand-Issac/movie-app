@@ -8,7 +8,7 @@ function MovieSearch(props) {
     const handleClick = async (e) => {
       e.preventDefault();
       const apiKey = '44d30801'; // would normally be stored in a .env file
-      const url = 'http://www.omdbapi.com/?apikey=' + apiKey + '&s=' + movie;
+      const url = 'https://www.omdbapi.com/?apikey=' + apiKey + '&s=' + movie;
       const res = await fetch(url);
       const resData = await res.json();
       const data = resData.Search;

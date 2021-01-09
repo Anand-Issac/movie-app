@@ -11,7 +11,7 @@ function MovieResults(props) {
     const getDetails = async (movie) => {
         setIsOpen(true);
         const apiKey = '44d30801'; // would normally be stored in a .env file
-        const url = 'http://www.omdbapi.com/?apikey=' + apiKey + '&i=' + movie.imdbID;
+        const url = 'https://www.omdbapi.com/?apikey=' + apiKey + '&i=' + movie.imdbID;
         const res = await fetch(url);
         const resData = await res.json();
         const data = resData;
