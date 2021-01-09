@@ -1,0 +1,22 @@
+.container-class {
+    border-radius: 15px;
+    max-width: 2000px;
+    padding-left: 40px;
+    padding-top: 10px;
+    padding-bottom: 20px;  
+}
+
+.input-box{
+    height: 40px;
+    width: 500px;
+    padding: 10px;
+}
+
+.input-button {
+    height: 40px;
+    border-radius: 5px;
+}
+
+.input-button:hover {
+    background-color: rgba(0,0,0,0.2);
+}

@@ -1,0 +1,29 @@
+.container-class {
+    border-radius: 15px;
+    max-width: 3000px;
+    padding-left: 40px;
+    padding-top: 10px;
+    padding-bottom: 20px;  
+}
+
+.movie-container{
+    padding-bottom: 10px;
+}
+
+.movie-item{
+    width:85%;
+    float:left;
+}
+
+.nominate-button-container{
+    width:10%;
+    float:left;
+}
+
+.nominate-button{
+    height:30px;
+}
+
+.clearfix{
+    clear: both;
+}

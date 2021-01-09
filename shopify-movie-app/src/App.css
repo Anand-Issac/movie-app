@@ -36,3 +36,41 @@
     transform: rotate(360deg);
   }
 }
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 20px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color:#F8F8F8
+}
+
+p{
+  font-size: 1.6 rem;
+}
+
+small {
+  font-size: 1.2 rem;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 2000px;
+  padding: 40px;
+}
+
+.title {
+  text-align: center;
+}
+
+.movie-container {
+  width: 50%;
+  height: 50%;
+  background-color: white;
+}
