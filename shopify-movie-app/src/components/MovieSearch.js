@@ -12,6 +12,7 @@ function MovieSearch(props) {
       const res = await fetch(url);
       const resData = await res.json();
       const data = resData.Search;
+      console.log(data);
       props.sendMoviesData(data, movie);
     };
 

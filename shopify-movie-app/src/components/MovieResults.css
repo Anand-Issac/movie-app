@@ -12,12 +12,10 @@
 
 .movie-item{
     width:85%;
-    float:left;
 }
 
 .nominate-button-container{
     width:10%;
-    float:left;
 }
 
 .nominate-button{
@@ -26,4 +24,19 @@
 
 .clearfix{
     clear: both;
+}
+
+.flex-container {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.see-more-container {
+    width: 15%;
+}
+
+.see-more {
+    margin-left: 10px;
+    height: 30px;
+  
 }

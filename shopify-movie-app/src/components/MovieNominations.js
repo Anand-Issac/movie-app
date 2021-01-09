@@ -11,7 +11,7 @@ function MovieNominations(props) {
             <p>Nominations</p>
             <ul>
               {props.nominatedMovies.map(movie => (
-                  <div className="movie-container" >
+                  <div className="flex-container" >
                       <div className="movie-item">
                           <li>{movie.Title} ({movie.Year})</li>
                       </div>

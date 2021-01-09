@@ -10,14 +10,17 @@
     padding-bottom: 10px;
 }
 
+.flex-container {
+    display: flex;
+    margin-bottom: 10px;
+}
+
 .movie-item{
     width:85%;
-    float:left;
 }
 
 .nominate-button-container{
     width:10%;
-    float:left;
 }
 
 .nominate-button{

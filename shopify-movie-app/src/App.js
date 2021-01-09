@@ -6,37 +6,23 @@ import MovieNominations from './components/MovieNominations';
 import React, { useState } from 'react';
 import Modal from 'react-modal';
 
-const customStyles = {
-  content : {
-    top                   : '50%',
-    left                  : '50%',
-    right                 : 'auto',
-    bottom                : 'auto',
-    marginRight           : '-50%',
-    transform             : 'translate(-50%, -50%)'
-  }
-};
-
 function App() {
   const [movies, setMovies] = useState([]);
   const [movieSearchTitle, setMovieSearchTitle] = useState("");
   const [nominatedMovies, setNominatedMovies] = useState([]);
 
   const [modalIsOpen,setIsOpen] = React.useState(true);
-  console.log(modalIsOpen);
   function openModal() {
     setIsOpen(true);
   }
   function afterOpenModal() {
-    // references are now sync'd and can be accessed.
-    //subtitle.style.color = '#f00';
   }
  
   function closeModal(){
     setIsOpen(false);
   }
 
-  //callback function that sends data from child comp. to parent comp.
+  //callback functions that sends data from child comp. to parent comp.
   const sendMoviesData = (moviesData, movieSearchTitleRes) => {
     setMovies(moviesData);
     setMovieSearchTitle(movieSearchTitleRes);
@@ -67,7 +53,6 @@ function App() {
             style={customStyles}
             contentLabel="Nomination Limit Modal"
           >
-  
             <h2>Thank you for your nominations!</h2>
             <div>
               <p>
@@ -97,5 +82,16 @@ function App() {
     </div>
   );
 }
+
+const customStyles = {
+  content : {
+    top                   : '50%',
+    left                  : '50%',
+    right                 : 'auto',
+    bottom                : 'auto',
+    marginRight           : '-50%',
+    transform             : 'translate(-50%, -50%)'
+  }
+};
 
 export default App;
