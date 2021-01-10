@@ -2,7 +2,8 @@
 
 This app is my submission for the Shopify Summer 2021 Front End Developer Challenge. All the code is located inside shopify-movie-app.
 
-It includes: 
+It includes:
+
 Expected functionality:
 
   - Search bar which searches for and displays movies (OMDB API)
