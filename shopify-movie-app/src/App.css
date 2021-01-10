@@ -48,7 +48,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-color:#F8F8F8
+  background-color:white;
 }
 
 p{
@@ -91,4 +91,23 @@ small {
 
 .clear{
   clear: both;
+}
+
+.body-container {
+  background-color: white;
+}
+
+.modal-button{
+  float:right;
+}
+
+.max-nom-input-container{
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 40px;
+}
+
+.thank-you{
+  padding-left: 10px;
+  padding-right: 10px;
 }

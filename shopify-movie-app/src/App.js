@@ -53,32 +53,32 @@ function App() {
             style={customStyles}
             contentLabel="Nomination Limit Modal"
           >
-            <h2>Thank you for your nominations!</h2>
-            <div>
+            <h2 className="thank-you">Thank you for your nominations!</h2>
+            <div className="max-nom-input-container">
               <p>
                 Your input is very valued here at Shopify! Have a wonderful day.
               </p>
             </div>
-            <button onClick={closeModal}>close</button>
+            <button className="modal-button" onClick={closeModal}>close</button>
             
         </Modal>
       }
       
       
       <h1 className="title">The Shoppies</h1>
-      <div className="movie-container-1" style={{"margin-bottom": "10px"}}>
-        <MovieSearch movies={movies} sendMoviesData={sendMoviesData}></MovieSearch>
-      </div>
-      <div className="container-4">
-        <div className="movie-container-2" style={{"margin-bottom": "10px"}}>
-          <MovieResults movies={movies} movieSearchTitle={movieSearchTitle} nominatedMovies={nominatedMovies} sendNominations={sendNominations} className="movie-container"></MovieResults>
+        <div className="movie-container-1" style={{"margin-bottom": "10px"}}>
+          <MovieSearch movies={movies} sendMoviesData={sendMoviesData}></MovieSearch>
         </div>
+        <div className="container-4">
+            <div className="movie-container-2" style={{"margin-bottom": "10px"}}>
+              <MovieResults movies={movies} movieSearchTitle={movieSearchTitle} nominatedMovies={nominatedMovies} sendNominations={sendNominations} className="movie-container"></MovieResults>
+            </div>
 
-        <div className="movie-container-3" >
-          <MovieNominations nominatedMovies={nominatedMovies} removeNomination={removeNomination} className="movie-container"></MovieNominations>
+            <div className="movie-container-3" >
+              <MovieNominations nominatedMovies={nominatedMovies} removeNomination={removeNomination} className="movie-container"></MovieNominations>
+            </div>
+            <div className="clear"></div>
         </div>
-        <div className="clear"></div>
-      </div>
     </div>
   );
 }

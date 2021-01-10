@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './MovieResults.css';
 import Modal from 'react-modal';
+import DefaultImage from '../assets/default-image.png';
 
 function MovieResults(props) {
     const [movie, setMovie] = useState([]);
@@ -17,7 +18,6 @@ function MovieResults(props) {
         const data = resData;
         console.log(data);
         setMovie(data);
-
     }
 
     const closeModal = () => {
@@ -64,20 +64,15 @@ function MovieResults(props) {
                     style={customStyles}
                     contentLabel="Nomination Limit Modal"
                 >
-        
                     <h2>{movie.Title}</h2>
-                    <img src={movie.Poster}></img>
-                    <p> <span style={{fontWeight:"bold"}}>Genre: </span>{movie.Genre}</p>
-                    <p><span style={{fontWeight:"bold"}}>Plot: </span>{movie.Plot}</p>
-                    <p><span style={{fontWeight:"bold"}}>IMDB Rating: </span>{movie.imdbRating} / 10</p>
-                    
-                    <div>
-                    </div>
-                    <button onClick={closeModal}>close</button>
-                    
+                    <img src={movie.Poster=="N/A"?DefaultImage:movie.Poster}></img>
+                    <p> <span style={{fontWeight:"bold"}}>Genre: </span>{movie.Genre=="N/A" ? "Genre is not available" : movie.Genre}</p>
+                    <p><span style={{fontWeight:"bold"}}>Plot: </span>{movie.Plot=="N/A" ? "Plot is not available":movie.Plot}</p>
+                    <p><span style={{fontWeight:"bold"}}>IMDB Rating: </span>{movie.imdbRating=="N/A" ? "Rating is not available":movie.imdbRating} / 10</p>
+                    <button className="modal-button" onClick={closeModal}>close</button>                  
                 </Modal>
                 <ul>
-                    {props.movies != null && 
+                    {props.movies != null ? 
                     props.movies.map(movie => (
                         <div>
                             <div className="flex-container" >
@@ -93,7 +88,7 @@ function MovieResults(props) {
                                 
                             </div>
                         </div>
-                    ))}
+                    )) : "Sorry! We could not find what you were looking for."}
                 </ul>
             </div>
         </div> 
