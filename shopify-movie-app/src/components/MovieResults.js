@@ -76,7 +76,8 @@ function MovieResults(props) {
                     
                 </Modal>
                 <ul>
-                    {props.movies.map(movie => (
+                    {props.movies != null && 
+                    props.movies.map(movie => (
                         <div>
                             <div className="flex-container" >
                                 <div className="movie-item">
@@ -105,7 +106,8 @@ content : {
     right                 : 'auto',
     bottom                : 'auto',
     marginRight           : '-50%',
-    transform             : 'translate(-50%, -50%)'
+    transform             : 'translate(-50%, -50%)',
+    maxWidth : '1000px',
 }
 };
 export default MovieResults;
