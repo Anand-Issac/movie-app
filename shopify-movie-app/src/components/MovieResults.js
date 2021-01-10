@@ -21,6 +21,7 @@ function MovieResults(props) {
     }
 
     const closeModal = () => {
+        setMovie([]);
         setIsOpen(false);
     }
 
@@ -64,7 +65,7 @@ function MovieResults(props) {
                     contentLabel="Nomination Limit Modal"
                 >
         
-                    <h2>{movie.Title} ({movie.Year})</h2>
+                    <h2>{movie.Title}</h2>
                     <img src={movie.Poster}></img>
                     <p> <span style={{fontWeight:"bold"}}>Genre: </span>{movie.Genre}</p>
                     <p><span style={{fontWeight:"bold"}}>Plot: </span>{movie.Plot}</p>
