@@ -2,7 +2,7 @@
 
 This app is my submission for the Shopify Summer 2021 Front End Developer Challenge. All the code is located inside shopify-movie-app.
 
-# The application is hosted on Heroku; here is the link: https://shoppies-app-anand.herokuapp.com/
+# https://shoppies-app-anand.herokuapp.com/
 
 
 It includes:
