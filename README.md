@@ -1,4 +1,4 @@
-# Shoppies App by Anand Issac ( https://shoppies-app-anand.herokuapp.com/ )
+# Shoppies App by Anand Issac 
 
 This app is my submission for the Shopify Summer 2021 Front End Developer Challenge. All the code is located inside shopify-movie-app.
 
