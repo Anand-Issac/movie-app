@@ -1,6 +1,8 @@
 # Shoppies App by Anand Issac
 This app is my submission for the Shopify Summer 2021 Front End Developer Challenge. 
 
+# https://shoppies-app-anand.herokuapp.com/
+
 It includes:
 Expected functionality:
  - Search bar which searches for and displays movies (OMDB API)
